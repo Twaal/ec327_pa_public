@@ -1,13 +1,13 @@
 #include <iostream>
 #include <cmath>
-#include <string>
+//#include <string>
 using namespace std;
 double let2num(string);
 void check(double);
  int main(void){
 	string c1,c2,c3,c4,c5;
 	double g1,g2,g3,g4,g5,gpa;
-	cout << "Enter the grade for each class, then hit enter!!!!!\n" << endl;
+	cout << "Enter the grade for each class, then hit enter.\n" << endl;
 	cout << "Calass 1: " << endl;
 	cin >>  c1;
 	g1 = let2num(c1);
