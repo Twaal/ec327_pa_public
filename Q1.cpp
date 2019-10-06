@@ -62,6 +62,5 @@ double let2num(string letter){
 void check(double grade) {
 	if (grade == 100) {
 		cout << "This is an invalid input. Goodbye." << endl;
-		exit(0);
 	}
 }

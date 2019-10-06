@@ -2,6 +2,7 @@
 #include <math.h>
 using namespace std;
 bool intsctChk(float,float,float,float,float,float);
+float absVal(float);
 /****************************************************************************************
 *******                                                                           *******
 *******       This program takes the x and y coordinates and area of 2 squares,   *******
@@ -31,7 +32,7 @@ int main(){
 		cout<<"These squares overlap.";
 		return 0;
 	} else {
-		cout<<"These squares do not overlap.";
+		cout<<"These squares do not overlap.\n";
 		return 0;
 	}
 
@@ -40,8 +41,17 @@ int main(){
 bool intsctChk(float x1, float y1, float a1, float x2, float y2, float a2){
 	float xLen1 = sqrt(a1);
 	//check if the distance is greater than the lengths
-	if (abs(x2-x1) > xLen1 && abs(y2-y1) > xLen1){
+	if (absVal(x2-x1) > xLen1 && absVal(y2-y1) > xLen1){
 		//if the distance is greater in both directions, then the squares do not overlap
 		return false;
 	} else {return true;}
+}
+// Finds absolute value of a float //
+float absVal(float num){
+	if (num < 0){
+		num = num*(-1);
+	} else if (num >= 0){
+		num = num;
+	}
+	return num;
 }
